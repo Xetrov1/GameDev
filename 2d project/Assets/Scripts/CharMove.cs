@@ -21,7 +21,7 @@ public class CharMove : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        
     }
     // runs before update
     private void FixedUpdate()
