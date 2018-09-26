@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharMove.cs" />
+    <Compile Include="Assets\Scripts\CoinPickup.cs" />
     <Compile Include="Assets\Scripts\Deathbox.cs" />
     <Compile Include="Assets\Scripts\Grapple.cs" />
     <Compile Include="Assets\Scripts\Scoremanager.cs" />
