@@ -22,11 +22,11 @@ public class Scoremanager : MonoBehaviour {
         Scoretext.text = " " + score;
 	}
 
-    public static void addPoints(int pointsToadd) {
-        score += pointsToadd;
+    public static void addPoints(int pointsToAdd) {
+        score += pointsToAdd;
     }
 
-    public static void Reset() {
-        score = 0;
-    }
+    //public static void Reset() {
+    //    score = 0;
+    //}
 }
