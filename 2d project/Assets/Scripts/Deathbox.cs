@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Deathbox : MonoBehaviour {
 
-	private void OnTriggerEnter2D(BoxCollider2D other)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
         if(other.name == "spr_pc") {
             Debug.Log("Player Enters Death Zone");
@@ -16,4 +16,4 @@ public class Deathbox : MonoBehaviour {
 }
 
 
-// 
+ 

@@ -6,20 +6,23 @@ using UnityEngine.UI;
 public class Scoremanager : MonoBehaviour {
 
     public static int score;
-    Text Scoretext;
+    Text ScoreText;
 	// Use this for initialization
 	void Start () {
-        Scoretext = GetComponent<Text>();
+        ScoreText = GetComponent<Text>();
 
         score = 0;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (score < 0)
+        {
             score = 0;
 
-        Scoretext.text = " " + score;
+        }
+        ScoreText.text = " " + score;
 	}
 
     public static void addPoints(int pointsToAdd) {
