@@ -5,31 +5,22 @@ using UnityEngine.UI;
 
 public class Scoremanager : MonoBehaviour {
 
-    public static int score;
-    Text ScoreText;
-	// Use this for initialization
-	void Start () {
-        ScoreText = GetComponent<Text>();
+    Text txt;
+    public static int currentscore = 100;
 
-        score = 0;
+	//
+	private void Start()
+	{
+        currentscore = 0;
+        txt = gameObject.GetComponent<Text>();
+        txt.text = "Score: " + currentscore;
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (score < 0)
-        {
-            score = 0;
-
-        }
-        ScoreText.text = " " + score;
+	private void Update()
+	{
+        txt.text = "Score: " + currentscore;
 	}
-
-    public static void addPoints(int pointsToAdd) {
-        score += pointsToAdd;
+    public static void AddPoints(int pointValue) {
+        currentscore = currentscore + pointValue;
     }
-
-    //public static void Reset() {
-    //    score = 0;
-    //}
 }

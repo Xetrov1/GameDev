@@ -35,14 +35,14 @@ public class LevelManager : MonoBehaviour {
         // generte death particles
         Instantiate(deathParticles, pc.transform.position, pc.transform.rotation);// first thing we want created is death particle
         // hide player
-        pc.enabled = false;
+     //   pc.enabled = false;
         pc.GetComponent<Renderer>().enabled = false;
         // gravity reset
         gravityStore = pc.GetComponent<Rigidbody2D>().gravityScale;
         pc.GetComponent<Rigidbody2D>().gravityScale = 0f;
         pc.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         // Point Penalty
-        Scoremanager.addPoints(-pointPenaltyOnDeath);
+        Scoremanager.AddPoints(-pointPenaltyOnDeath);
         // Debug Message
         Debug.Log("Player Respawn");
         // Respawn Delay
@@ -52,7 +52,10 @@ public class LevelManager : MonoBehaviour {
         // Match Players transform position
         pc.transform.position = currentCheckPoint.transform.position;
         // show player
-
+       //  pc.enabled = true;
+        pc.GetComponent<Renderer>().enabled = true;
+        //spawn pc
+        Instantiate(respawnParticles, currentCheckPoint.transform.position, currentCheckPoint.transform.rotation);
     }
 	// Update is called once per frame
 	void Update () {
