@@ -62,8 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharMove.cs" />
-    <Compile Include="Assets\Scripts\CheckPoint.cs" />
-    <Compile Include="Assets\Scripts\CoinPickup.cs" />
     <Compile Include="Assets\Scripts\Deathbox.cs" />
     <Compile Include="Assets\Scripts\enemyPatrol.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
@@ -316,3 +314,5 @@
   </Target>
   -->
 </Project>
+    <Compile Include="Assets\Scripts\CheckPoint.cs" />
+    <Compile Include="Assets\Scripts\CoinPickup.cs" />
