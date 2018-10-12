@@ -41,7 +41,8 @@ public class CharMove : MonoBehaviour
         {
             doubleJump = false;
         }
-        if(Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded) {
+        if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded)
+        {
             Jump();
             doubleJump = true;
         }
@@ -61,6 +62,18 @@ public class CharMove : MonoBehaviour
         }
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+
+
+
+        // player flip
+        if (GetComponent<Rigidbody2D>().velocity.x > 0)
+        {
+            transform.localScale = new Vector3(4f, 4f, 1f);
+        }
+        else if (GetComponent<Rigidbody2D>().velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-4f, 4f, 1f);
+        }
 
     }
 

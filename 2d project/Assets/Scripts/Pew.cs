@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pew : MonoBehaviour {
 
     public float Speed;
-
+   
     public Rigidbody2D pc;
 
     public GameObject EnemyDeath;
@@ -23,6 +23,7 @@ public class Pew : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity.y);
+
 	}
 	void OnTriggerEnter2D(Collider2D other)
 	{
@@ -34,4 +35,5 @@ public class Pew : MonoBehaviour {
         Instantiate(ProjectileParticle, transform.position, transform.rotation);
         Destroy(gameObject);
     } // ends ontrigger 
+
 }
