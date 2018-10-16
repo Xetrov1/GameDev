@@ -7,12 +7,13 @@ public class Pew : MonoBehaviour {
     public float Speed;
    
     public Rigidbody2D pc;
-
+    // public
     public GameObject EnemyDeath;
-
+    public bool deadClone = false;
     public GameObject ProjectileParticle;
     public int PointsforKill;
-
+    float currCountdownValue;
+    public float startTime;
 	// Use this for initialization
 	void Start () {
         // Player = FindObjectOfType<Rigidbody2D>();
@@ -23,8 +24,21 @@ public class Pew : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity.y);
+         /*startTime -= Time.deltaTime;
+        print(startTime);
+        if(startTime < 5){
+            if (deadClone)
+            {
+                var clones = GameObject.FindGameObjectsWithTag("clone");
+                foreach (var clone in clones)
+                {
+                    Destroy(clone);
+                } // end foreach
+            } // end if deadClone
+        } // end if start */
+    } // end update
 
-	}
+	
 	void OnTriggerEnter2D(Collider2D other)
 	{
         if(other.tag == "Enemy"){
@@ -32,6 +46,8 @@ public class Pew : MonoBehaviour {
             Destroy(other.gameObject);
             Scoremanager.AddPoints(PointsforKill);
         } // ends if
+
+
         Instantiate(ProjectileParticle, transform.position, transform.rotation);
         Destroy(gameObject);
     } // ends ontrigger 
