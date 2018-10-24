@@ -12,7 +12,7 @@ public class CoinPickup : MonoBehaviour {
         if (other.GetComponent<Rigidbody2D>() == null)
             return;
 
-        Scoremanager.AddPoints(50);
+        Scoremanager.AddPoints(pointsToAdd);
 
         Destroy(gameObject);
 	}
