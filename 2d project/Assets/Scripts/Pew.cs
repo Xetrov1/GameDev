@@ -13,29 +13,16 @@ public class Pew : MonoBehaviour {
     public GameObject ProjectileParticle;
     public int PointsforKill;
     float currCountdownValue;
-    public float startTime;
-	// Use this for initialization
-	void Start () {
-        // Player = FindObjectOfType<Rigidbody2D>();
-        if (pc.transform.localScale.x < 0)
-            Speed = -Speed;
-	}
-	
+  //  public float startTime;
+   
+
+    // Use this for initialization
+
+
 	// Update is called once per frame
 	void Update () {
         GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity.y);
-         /*startTime -= Time.deltaTime;
-        print(startTime);
-        if(startTime < 5){
-            if (deadClone)
-            {
-                var clones = GameObject.FindGameObjectsWithTag("clone");
-                foreach (var clone in clones)
-                {
-                    Destroy(clone);
-                } // end foreach
-            } // end if deadClone
-        } // end if start */
+
     } // end update
 
 	
@@ -51,5 +38,6 @@ public class Pew : MonoBehaviour {
         Instantiate(ProjectileParticle, transform.position, transform.rotation);
         Destroy(gameObject);
     } // ends ontrigger 
+
 
 }
