@@ -9350,7 +9350,6 @@ Transform:
   m_LocalPosition: {x: -14.66, y: -50.44, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
-  - {fileID: 2018226552}
   - {fileID: 1522325092}
   - {fileID: 1752970728}
   m_Father: {fileID: 0}
@@ -11197,7 +11196,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1333704450}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1571642060
 GameObject:
@@ -11326,8 +11325,7 @@ MonoBehaviour:
   pc: {fileID: 1333704448}
   EnemyDeath: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847, type: 2}
   deadClone: 0
-  ProjectileParticle: {fileID: 1167669679673886, guid: d9bd78a1886a24f8e91bc852df8abf32,
-    type: 2}
+  ProjectileParticle: {fileID: 0}
   PointsforKill: 150
 --- !u!1 &1586657654
 GameObject:
@@ -12712,7 +12710,7 @@ GameObject:
   m_Layer: 0
   m_Name: firePoint
   m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -12727,7 +12725,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1333704450}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771546582
 GameObject:
@@ -13994,6 +13992,7 @@ GameObject:
   - component: {fileID: 2018226555}
   - component: {fileID: 2018226554}
   - component: {fileID: 2018226553}
+  - component: {fileID: 2018226556}
   m_Layer: 0
   m_Name: pc_Camera
   m_TagString: Untagged
@@ -14008,11 +14007,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2018226551}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.001, y: 0.004, z: -5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -14.656, y: -50.424, z: -5}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
-  m_Father: {fileID: 1333704450}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &2018226553
 AudioListener:
@@ -14064,6 +14063,21 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2018226556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2018226551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408328d04a568433f8c77ca9ddf788d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFollowing: 0
+  pc: {fileID: 0}
+  xOffset: 0
+  yOffset: 0
 --- !u!1 &2022335094
 GameObject:
   m_ObjectHideFlags: 0

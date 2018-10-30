@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Pew.cs" />
     <Compile Include="Assets\Scripts\Scoremanager.cs" />
     <Compile Include="Assets\Scripts\Shoot.cs" />
+    <Compile Include="Assets\Scripts\SmoothFollowCamera.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/58264/Documents/Github/GameDev/2d project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
