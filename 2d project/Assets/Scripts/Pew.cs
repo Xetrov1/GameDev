@@ -13,11 +13,16 @@ public class Pew : MonoBehaviour {
     public GameObject ProjectileParticle;
     public int PointsforKill;
     float currCountdownValue;
-  //  public float startTime;
-   
+	//  public float startTime;
 
-    // Use this for initialization
 
+	// Use this for initialization
+	private void Start()
+	{
+        if(pc.transform.localScale.x > 0) {
+            Speed = -Speed;
+        }
+	}
 
 	// Update is called once per frame
 	void Update () {
