@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour {
 
     public Rigidbody2D pc;
 
+    public GameObject pc2;
+
     // particles
     public GameObject deathParticles;
 
@@ -25,6 +27,8 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        pc = GameObject.Find("pc").GetComponent<Rigidbody2D>();
+        pc2 = GameObject.Find("pc");
      //   pc = FindObjectOfType<Rigidbody2D>();
 	}
     public void RespawnPlayer() {
@@ -34,8 +38,10 @@ public class LevelManager : MonoBehaviour {
     public IEnumerator RespawnPlayerCo(){
         // generte death particles
         Instantiate(deathParticles, pc.transform.position, pc.transform.rotation);// first thing we want created is death particle
-        // hide player
-     //   pc.enabled = false;
+                                                                                  // hide player
+                                                                                  //   pc.enabled = false;
+        pc2.SetActive(false);
+       
         pc.GetComponent<Renderer>().enabled = false;
 
         // gravity reset
@@ -60,7 +66,9 @@ public class LevelManager : MonoBehaviour {
 
         // show player
        //  pc.enabled = true;
+        pc2.SetActive(true);
         pc.GetComponent<Renderer>().enabled = true;
+      
         //spawn pc
         Instantiate(respawnParticles, currentCheckPoint.transform.position, currentCheckPoint.transform.rotation);
     }

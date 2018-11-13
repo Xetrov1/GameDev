@@ -10,6 +10,15 @@ public class Shoot : MonoBehaviour {
     public Transform firePoint;
 
     public GameObject projectile;
+
+
+	private void Start()
+	{
+        projectile = Resources.Load("Prefabs/Projectile") as GameObject;
+	}
+
+
+
 	// Update is called once per frame
 	void Update () {
         if(Input.GetKeyDown(KeyCode.Mouse0)) {
