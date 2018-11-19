@@ -1,18 +1,19 @@
 ﻿<Properties StartupConfiguration="{FEFDB2B9-BE6E-F03B-B2F7-5217F65C3A77}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pew.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DestroyParticle.cs">
     <Files>
-      <File FileName="Assets/Scripts/CharMove.cs" Line="70" Column="10" />
+      <File FileName="Assets/Scripts/CharMove.cs" Line="12" Column="34" />
       <File FileName="Assets/Scripts/KillPlayer.cs" Line="22" Column="1" />
-      <File FileName="Assets/Scripts/LevelManager.cs" Line="14" Column="5" />
+      <File FileName="Assets/Scripts/LevelManager.cs" Line="34" Column="33" />
       <File FileName="Assets/Scripts/CheckPoint.cs" Line="27" Column="1" />
       <File FileName="Assets/Scripts/CoinPickup.cs" Line="21" Column="1" />
       <File FileName="Assets/Scripts/Deathbox.cs" Line="7" Column="49" />
       <File FileName="Assets/Scripts/enemyPatrol.cs" Line="18" Column="30" />
       <File FileName="Assets/Scripts/Scoremanager.cs" Line="12" Column="15" />
-      <File FileName="Assets/Scripts/Shoot.cs" Line="11" Column="5" />
-      <File FileName="Assets/Scripts/Pew.cs" Line="27" Column="36" />
+      <File FileName="Assets/Scripts/Shoot.cs" Line="10" Column="32" />
+      <File FileName="Assets/Scripts/Pew.cs" Line="26" Column="7" />
       <File FileName="Assets/Scripts/SmoothFollowCamera.cs" Line="24" Column="10" />
+      <File FileName="Assets/Scripts/DestroyParticle.cs" Line="9" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

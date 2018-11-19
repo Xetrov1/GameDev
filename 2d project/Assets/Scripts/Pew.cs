@@ -30,20 +30,22 @@ public class Pew : MonoBehaviour {
         if(pc.transform.localScale.x > 0) {
             Speed = -Speed;
         }
-        Destroy(GameObject.Find("projectile(Clone)"), timeOut); 
+        //Destroy(GameObject.Find("projectile(Clone)"), timeOut); 
 	}
 
 	// Update is called once per frame
 	void Update () {
         GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity.y);
         startTime += Time.deltaTime;
-
+        if (timeOut <= 0) {
+            Destroy(GameObject.Find("projectile(Clone)"));
+        }
 
 
     } // end update
 
 	
-	void OnTriggerEnter2D(Collider2D other)
+	void Collider(Collider2D other)
 	{
         float time = startTime;
         if(other.tag == "Enemy"){
@@ -52,16 +54,17 @@ public class Pew : MonoBehaviour {
             Scoremanager.AddPoints(PointsforKill);
         } // ends if
         Destroy(GameObject.Find("projectile(Clone)"), timeOut); 
-        //else if (time >= 2) { // Destroy the clone
+
+        //else if(time >= 2) { // Destroy the clone
         //    Destroy(GameObject.Find("projectile(Clone)"));
         //    startTime = 0;
         //} // ends else if
 
 
     } // ends ontrigger 
- void OnCollisionEnter2D (Collision other)
+ void OnCollisionEnter2D (Collision2D other)
 	{
-        Instantiate(ProjectileParticle, transform.position, transform.rotation);
+        Instantiate(projectileParticle, transform.position, transform.rotation);
         Destroy(gameObject);
 	}
 

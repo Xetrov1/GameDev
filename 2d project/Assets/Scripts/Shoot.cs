@@ -14,7 +14,7 @@ public class Shoot : MonoBehaviour {
 
 	private void Start()
 	{
-        projectile = Resources.Load("Prefabs/Projectile") as GameObject;
+        //projectile = Resources.Load("Prefabs/Projectile") as GameObject;
 	}
 
 
