@@ -713,7 +713,7 @@ Transform:
   - {fileID: 1399879400}
   - {fileID: 1531610203}
   m_Father: {fileID: 665599562}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &142361869
 SpriteRenderer:
@@ -785,6 +785,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsToAddS: 50
   DestroyDelay: 0.01
+  DeathParticle: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847,
+    type: 2}
 --- !u!61 &142361872
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -909,7 +911,7 @@ Transform:
   - {fileID: 1505133898}
   - {fileID: 1448194958}
   m_Father: {fileID: 665599562}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &161552344
 SpriteRenderer:
@@ -981,6 +983,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsToAddS: 50
   DestroyDelay: 0.01
+  DeathParticle: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847,
+    type: 2}
 --- !u!61 &161552347
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2443,6 +2447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsToAddS: 0
   DestroyDelay: 0
+  DeathParticle: {fileID: 0}
 --- !u!1 &398100884
 GameObject:
   m_ObjectHideFlags: 0
@@ -3283,6 +3288,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsToAddS: 50
   DestroyDelay: 0.01
+  DeathParticle: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847,
+    type: 2}
 --- !u!61 &446502784
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4799,7 +4806,6 @@ Transform:
   - {fileID: 446502780}
   - {fileID: 1340004899}
   - {fileID: 727728826}
-  - {fileID: 2134730024}
   - {fileID: 1070221235}
   - {fileID: 1433928517}
   - {fileID: 161552343}
@@ -4869,6 +4875,7 @@ Transform:
   m_Children:
   - {fileID: 1347493309}
   - {fileID: 304568998}
+  - {fileID: 2134730024}
   m_Father: {fileID: 665599562}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4942,6 +4949,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsToAddS: 50
   DestroyDelay: 0.01
+  DeathParticle: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847,
+    type: 2}
 --- !u!61 &727728830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7238,7 +7247,7 @@ Transform:
   - {fileID: 1302275102}
   - {fileID: 1416012187}
   m_Father: {fileID: 665599562}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1070221236
 SpriteRenderer:
@@ -7310,6 +7319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsToAddS: 50
   DestroyDelay: 0.01
+  DeathParticle: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847,
+    type: 2}
 --- !u!61 &1070221239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8259,6 +8270,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsToAddS: 50
   DestroyDelay: 0.01
+  DeathParticle: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847,
+    type: 2}
 --- !u!61 &1203858479
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8901,6 +8914,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsToAddS: 50
   DestroyDelay: 0.01
+  DeathParticle: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847,
+    type: 2}
 --- !u!61 &1267808929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9832,6 +9847,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsToAddS: 50
   DestroyDelay: 0.01
+  DeathParticle: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847,
+    type: 2}
 --- !u!61 &1340004903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10528,7 +10545,7 @@ Transform:
   - {fileID: 948520402}
   - {fileID: 1671389173}
   m_Father: {fileID: 665599562}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1433928518
 SpriteRenderer:
@@ -10600,6 +10617,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsToAddS: 50
   DestroyDelay: 0.01
+  DeathParticle: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847,
+    type: 2}
 --- !u!61 &1433928521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14912,13 +14931,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2134730023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.36, y: 25.97, z: 0}
-  m_LocalScale: {x: 5.5, y: 5.5, z: 1}
+  m_LocalPosition: {x: 2.8509092, y: 5.112727, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1261838225}
   - {fileID: 717033773}
-  m_Father: {fileID: 665599562}
-  m_RootOrder: 5
+  m_Father: {fileID: 727728826}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2134730025
 SpriteRenderer:
@@ -14990,6 +15009,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsToAddS: 50
   DestroyDelay: 0.01
+  DeathParticle: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847,
+    type: 2}
 --- !u!61 &2134730028
 BoxCollider2D:
   m_ObjectHideFlags: 0

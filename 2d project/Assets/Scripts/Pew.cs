@@ -25,7 +25,6 @@ public class Pew : MonoBehaviour {
 
         EnemyDeath = Resources.Load("Prefabs/DeathP") as GameObject;
 
-        projectileParticle = Resources.Load("Prefabs/bulletParticle") as GameObject;
 
         if(pc.transform.localScale.x > 0) {
             Speed = -Speed;
@@ -61,10 +60,10 @@ public class Pew : MonoBehaviour {
 
 
  //   } // ends ontrigger 
- //void OnCollisionEnter2D (Collision2D other)
-	//{
- //       Instantiate(projectileParticle, transform.position, transform.rotation);
+ void OnCollisionEnter2D (Collision2D other)
+	{
+        Instantiate(projectileParticle, transform.position, transform.rotation);
  //       Destroy(gameObject);
-	//}
+	}
 
 }
