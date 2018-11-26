@@ -16,7 +16,7 @@ public class Pew : MonoBehaviour {
     float currCountdownValue;
 
     // adds time varailbe
-    public float startTime = 0;
+    //public float startTime = 0;
 
 	// Use this for initialization
 	private void Start()
@@ -30,42 +30,41 @@ public class Pew : MonoBehaviour {
         if(pc.transform.localScale.x > 0) {
             Speed = -Speed;
         }
-        //Destroy(GameObject.Find("projectile(Clone)"), timeOut); 
+        Destroy(GameObject.Find("projectile(Clone)"), timeOut); 
 	}
 
 	// Update is called once per frame
 	void Update () {
         GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity.y);
-        startTime += Time.deltaTime;
-        if (timeOut <= 0) {
-            Destroy(GameObject.Find("projectile(Clone)"));
-        }
+        //startTime += Time.deltaTime;
+        //if (timeOut <= 0) {
+        //    Destroy(GameObject.Find("projectile(Clone)"));
+        //}
 
 
     } // end update
 
 	
-	void Collider(Collider2D other)
-	{
-        float time = startTime;
-        if(other.tag == "Enemy"){
-            Instantiate(EnemyDeath, other.transform.position, other.transform.rotation);
-            Destroy(other.gameObject);
-            Scoremanager.AddPoints(PointsforKill);
-        } // ends if
-        Destroy(GameObject.Find("projectile(Clone)"), timeOut); 
 
-        //else if(time >= 2) { // Destroy the clone
-        //    Destroy(GameObject.Find("projectile(Clone)"));
-        //    startTime = 0;
-        //} // ends else if
+        ////float time = startTime;
+        //if(other.tag == "Enemy"){
+        //    Instantiate(EnemyDeath, other.transform.position, other.transform.rotation);
+        //    Destroy(other.gameObject);
+        //    Scoremanager.AddPoints(PointsforKill);
+        //} // ends if
+        //Destroy(GameObject.Find("projectile(Clone)"), timeOut); 
+
+        ////else if(time >= 2) { // Destroy the clone
+        ////    Destroy(GameObject.Find("projectile(Clone)"));
+        ////    startTime = 0;
+        ////} // ends else if
 
 
-    } // ends ontrigger 
- void OnCollisionEnter2D (Collision2D other)
-	{
-        Instantiate(projectileParticle, transform.position, transform.rotation);
-        Destroy(gameObject);
-	}
+ //   } // ends ontrigger 
+ //void OnCollisionEnter2D (Collision2D other)
+	//{
+ //       Instantiate(projectileParticle, transform.position, transform.rotation);
+ //       Destroy(gameObject);
+	//}
 
 }

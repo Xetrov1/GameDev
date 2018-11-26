@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58279869900587088}
   - component: {fileID: 50618528526757024}
   - component: {fileID: 114312299301570602}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,8 @@ MonoBehaviour:
   pc: {fileID: 0}
   EnemyDeath: {fileID: 1615753205857654, guid: 721b0713d962641e28653e548310d847, type: 2}
   deadClone: 0
-  ProjectileParticle: {fileID: 0}
+  projectileParticle: {fileID: 0}
   PointsforKill: 150
-  startTime: 2
 --- !u!212 &212715318668829042
 SpriteRenderer:
   m_ObjectHideFlags: 1
