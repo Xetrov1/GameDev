@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Shoot : MonoBehaviour {
-    // bullets life
-    public float Period;
+ 
     private float NextAction;
 
     public Transform firePoint;
@@ -14,7 +13,7 @@ public class Shoot : MonoBehaviour {
 
 	private void Start()
 	{
-        //projectile = Resources.Load("Prefabs/Projectile") as GameObject;
+        projectile = Resources.Load("Prefabs/projectile") as GameObject;
 	}
 
 
@@ -27,16 +26,4 @@ public class Shoot : MonoBehaviour {
         }
 	}
 
-    /*private void FixedUpdate()
-    {
-        if (NextAction <= Time.time)
-        {
-            Destroy(GameObject.Find("projectile(clone)"));
-        }
-    }
-    void Spawn()
-    {
-
-        NextAction = (Time.time + Period);
-    } */
 }

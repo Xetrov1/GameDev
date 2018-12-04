@@ -1,20 +1,14 @@
 ﻿<Properties StartupConfiguration="{FEFDB2B9-BE6E-F03B-B2F7-5217F65C3A77}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CharMove.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy Scipts/enemyPatrol.cs">
     <Files>
-      <File FileName="Assets/Scripts/CharMove.cs" Line="13" Column="15" />
-      <File FileName="Assets/Scripts/KillPlayer.cs" Line="17" Column="42" />
-      <File FileName="Assets/Scripts/LevelManager.cs" Line="52" Column="25" />
-      <File FileName="Assets/Scripts/CheckPoint.cs" Line="27" Column="1" />
-      <File FileName="Assets/Scripts/CoinPickup.cs" Line="21" Column="1" />
-      <File FileName="Assets/Scripts/Deathbox.cs" Line="7" Column="49" />
-      <File FileName="Assets/Scripts/enemyPatrol.cs" Line="18" Column="30" />
-      <File FileName="Assets/Scripts/Scoremanager.cs" Line="14" Column="26" />
-      <File FileName="Assets/Scripts/Pew.cs" Line="65" Column="9" />
-      <File FileName="Assets/Scripts/SmoothFollowCamera.cs" Line="24" Column="10" />
-      <File FileName="Assets/Scripts/DestroyParticle.cs" Line="11" Column="2" />
-      <File FileName="Assets/Scripts/DestroyonTouch.cs" Line="13" Column="32" />
-      <File FileName="Assets/Scripts/EnemyTouchBulletDeath.cs" Line="11" Column="5" />
+      <File FileName="Assets/Scripts/Main Menu Scripts/NextLvl.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/Bullet Scripts/DestroyonTouch.cs" Line="16" Column="2" />
+      <File FileName="Assets/Scripts/Main Menu Scripts/MainMenu.cs" Line="8" Column="5" />
+      <File FileName="Assets/Scripts/Bullet Scripts/Pew.cs" Line="38" Column="9" />
+      <File FileName="Assets/Scripts/Player Scripts/Shoot.cs" Line="22" Column="18" />
+      <File FileName="Assets/Scripts/Player Scripts/CharMove.cs" Line="85" Column="5" />
+      <File FileName="Assets/Scripts/Enemy Scipts/enemyPatrol.cs" Line="39" Column="57" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
