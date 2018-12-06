@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharMove : MonoBehaviour
 {
+    // Thing
+    public static float pcPositionX;
     // Player Movement variables
     public int Movespeed;
     public int JumpHeight;
@@ -31,6 +33,7 @@ public class CharMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pcPositionX = transform.position.x;
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             Jump();

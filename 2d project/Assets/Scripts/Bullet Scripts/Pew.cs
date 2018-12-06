@@ -15,6 +15,11 @@ public class Pew : MonoBehaviour {
     public int PointsforKill;
     float currCountdownValue;
 
+    // Test Variables
+    public bool test;
+    public float pcX;
+    public float bulletX;
+
     // adds time varailbe
     //public float startTime = 0;
 
@@ -26,7 +31,10 @@ public class Pew : MonoBehaviour {
         EnemyDeath = Resources.Load("Prefabs/DeathP") as GameObject;
 
 
-        if(pc.transform.localScale.x > 0) {
+        if(CharMove.pcPositionX < transform.position.x) { // < = false; > = true;
+            test = true;
+            bulletX = transform.position.x;
+            pcX = transform.position.x;
             Speed = -Speed;
         }
         //Destroy(GameObject.Find("projectile(Clone)"), timeOut); 

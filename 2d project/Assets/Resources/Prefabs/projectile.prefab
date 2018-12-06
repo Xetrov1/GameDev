@@ -9,21 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1564102480578736}
+  m_RootGameObject: {fileID: 1917693814879158}
   m_IsPrefabParent: 1
---- !u!1 &1564102480578736
+--- !u!1 &1917693814879158
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4209646956353080}
-  - component: {fileID: 212715318668829042}
-  - component: {fileID: 58279869900587088}
-  - component: {fileID: 50618528526757024}
-  - component: {fileID: 114378739671557366}
-  - component: {fileID: 114317217262300650}
+  - component: {fileID: 4725584390660186}
+  - component: {fileID: 212200444163778550}
+  - component: {fileID: 58993559984010250}
+  - component: {fileID: 50107572076402894}
+  - component: {fileID: 114197432754017264}
+  - component: {fileID: 114589748259999100}
   m_Layer: 11
   m_Name: projectile
   m_TagString: Untagged
@@ -31,60 +31,72 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4209646956353080
+--- !u!4 &4725584390660186
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564102480578736}
+  m_GameObject: {fileID: 1917693814879158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -127.365, y: 184.6, z: 0}
+  m_LocalPosition: {x: -25.234467, y: -49.29274, z: 0}
   m_LocalScale: {x: 0.5, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50618528526757024
+--- !u!50 &50107572076402894
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564102480578736}
+  m_GameObject: {fileID: 1917693814879158}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 5
   m_LinearDrag: 0
-  m_AngularDrag: 0.005
+  m_AngularDrag: 0.0001
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58279869900587088
+--- !u!58 &58993559984010250
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564102480578736}
+  m_GameObject: {fileID: 1917693814879158}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.2279607, y: 0.012214035}
   serializedVersion: 2
-  m_Radius: 0.1
---- !u!114 &114317217262300650
+  m_Radius: 0.30218273
+--- !u!114 &114197432754017264
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564102480578736}
+  m_GameObject: {fileID: 1917693814879158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff439035feb7402a9ec648f48ada571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyDelay: 0.5
+--- !u!114 &114589748259999100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917693814879158}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49872d8fa33044b9589a648bf34a6bbd, type: 3}
@@ -97,24 +109,15 @@ MonoBehaviour:
   projectileParticle: {fileID: 1167669679673886, guid: d9bd78a1886a24f8e91bc852df8abf32,
     type: 2}
   PointsforKill: 50
---- !u!114 &114378739671557366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564102480578736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fff439035feb7402a9ec648f48ada571, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyDelay: 0.5
---- !u!212 &212715318668829042
+  test: 0
+  pcX: 0
+  bulletX: 0
+--- !u!212 &212200444163778550
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564102480578736}
+  m_GameObject: {fileID: 1917693814879158}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

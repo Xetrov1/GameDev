@@ -22,7 +22,7 @@ public class Shoot : MonoBehaviour {
 	void Update () {
         if(Input.GetKeyDown(KeyCode.Mouse0)) {
             Instantiate(projectile, firePoint.position, firePoint.rotation);
-           // Spawn();
+
         }
 	}
 
