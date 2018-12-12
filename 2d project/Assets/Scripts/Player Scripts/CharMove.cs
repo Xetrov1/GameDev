@@ -15,7 +15,7 @@ public class CharMove : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     private bool grounded;
-
+    public Animator animator;
     // non-stick player
     private float moveVelocity;
 
@@ -23,7 +23,8 @@ public class CharMove : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isJumping", false);
     }
     // runs before update
     private void FixedUpdate()
@@ -49,7 +50,9 @@ public class CharMove : MonoBehaviour
             Jump();
             doubleJump = true;
         }
-
+        if(Input.GetKeyUp(KeyCode.Space)) {
+            animator.SetBool("isJumping", false);
+        }
         moveVelocity = 0f;
 
         // movement  a and d to move side to side
@@ -66,6 +69,19 @@ public class CharMove : MonoBehaviour
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
 
+        if (Input.GetKeyDown(KeyCode.D) || (Input.GetKeyDown(KeyCode.A)))
+        {
+            moveVelocity = Movespeed;
+            animator.SetBool("isWalking", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.D) && (Input.GetKeyUp(KeyCode.A)))
+        {
+            animator.SetBool("isWalking", false);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            moveVelocity = -Movespeed;
+            animator.SetBool("isWalking", true);
 
 
         // player flip
@@ -78,11 +94,14 @@ public class CharMove : MonoBehaviour
             transform.localScale = new Vector3(-0.6f, 0.8f, 1f);
         }
 
+       
+        }
     }
 
     public void Jump()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
+        animator.SetBool("isJumping", true);
     }
 
 
